@@ -67,19 +67,7 @@
         },
         "responses" : {
           "201" : {
-            "description" : "201",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/guest-schedule-guestScheduleId-779676275"
-                },
-                "examples" : {
-                  "비회원 일정 생성" : {
-                    "value" : "{\r\n  \"guestScheduleId\" : 1,\r\n  \"name\" : \"Meeting A\",\r\n  \"startDate\" : \"2023-01-01\",\r\n  \"startTime\" : \"09:00:00\",\r\n  \"endDate\" : \"2023-01-02\",\r\n  \"endTime\" : \"17:00:00\"\r\n}"
-                  }
-                }
-              }
-            }
+            "description" : "201"
           }
         }
       }
@@ -103,41 +91,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/guest-schedule-guestScheduleId-779676275"
+                  "$ref" : "#/components/schemas/guest-schedule-guestScheduleId103174176"
                 },
                 "examples" : {
                   "비회원 일정 조회" : {
-                    "value" : "{\r\n  \"guestScheduleId\" : 1,\r\n  \"name\" : \"Meeting A\",\r\n  \"startDate\" : \"2023-01-01\",\r\n  \"startTime\" : \"09:00:00\",\r\n  \"endDate\" : \"2023-01-02\",\r\n  \"endTime\" : \"17:00:00\"\r\n}"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete" : {
-        "tags" : [ "guest-schedule" ],
-        "operationId" : "비회원 일정 삭제",
-        "parameters" : [ {
-          "name" : "guestScheduleId",
-          "in" : "path",
-          "description" : "비회원 일정 ID",
-          "required" : true,
-          "schema" : {
-            "type" : "string"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200",
-            "content" : {
-              "text/plain;charset=UTF-8" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/room-roomId-members-roomMemberId486549215"
-                },
-                "examples" : {
-                  "비회원 일정 삭제" : {
-                    "value" : "Guest schedule successfully deleted"
+                    "value" : "{\r\n  \"id\" : 1,\r\n  \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n  \"time\" : {\r\n    \"startTime\" : \"09:00:00\",\r\n    \"endTime\" : \"17:00:00\"\r\n  },\r\n  \"name\" : {\r\n    \"value\" : \"Meeting A\"\r\n  },\r\n  \"status\" : \"PROGRESS\"\r\n}"
                   }
                 }
               }
@@ -170,11 +128,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/member-schedule-579727095"
+                  "$ref" : "#/components/schemas/member-schedule1188626968"
                 },
                 "examples" : {
                   "회원 일정 생성" : {
-                    "value" : "{\r\n  \"id\" : 1,\r\n  \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n  \"time\" : {\r\n    \"startTime\" : \"09:00:00\",\r\n    \"endTime\" : \"17:00:00\"\r\n  },\r\n  \"name\" : {\r\n    \"value\" : \"Meeting A\"\r\n  }\r\n}"
+                    "value" : "{\r\n  \"id\" : 1,\r\n  \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n  \"time\" : {\r\n    \"startTime\" : \"09:00:00\",\r\n    \"endTime\" : \"17:00:00\"\r\n  },\r\n  \"name\" : {\r\n    \"value\" : \"Meeting A\"\r\n  },\r\n  \"status\" : \"PROGRESS\"\r\n}"
                   }
                 }
               }
@@ -202,11 +160,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/member-schedule-579727095"
+                  "$ref" : "#/components/schemas/member-schedule1188626968"
                 },
                 "examples" : {
                   "회원 일정 조회" : {
-                    "value" : "{\r\n  \"id\" : 1,\r\n  \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n  \"time\" : {\r\n    \"startTime\" : \"09:00:00\",\r\n    \"endTime\" : \"17:00:00\"\r\n  },\r\n  \"name\" : {\r\n    \"value\" : \"Meeting A\"\r\n  }\r\n}"
+                    "value" : "{\r\n  \"id\" : 1,\r\n  \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n  \"time\" : {\r\n    \"startTime\" : \"09:00:00\",\r\n    \"endTime\" : \"17:00:00\"\r\n  },\r\n  \"name\" : {\r\n    \"value\" : \"Meeting A\"\r\n  },\r\n  \"status\" : \"PROGRESS\"\r\n}"
                   }
                 }
               }
@@ -289,11 +247,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/room-roomId-219825925"
+                  "$ref" : "#/components/schemas/room-roomId1690945989"
                 },
                 "examples" : {
                   "방 조회" : {
-                    "value" : "{\r\n  \"roomId\" : 1,\r\n  \"name\" : \"Room A\",\r\n  \"description\" : \"This is room A\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"ongoingSchedules\" : [ {\r\n    \"id\" : 1,\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    }\r\n  } ],\r\n  \"completedSchedules\" : [ ]\r\n}"
+                    "value" : "{\r\n  \"roomId\" : 1,\r\n  \"name\" : \"Room A\",\r\n  \"description\" : \"This is room A\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"schedules\" : [ {\r\n    \"id\" : 1,\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n}"
                   }
                 }
               }
@@ -363,11 +321,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/room-roomId-219825925"
+                  "$ref" : "#/components/schemas/room-roomId418303700"
                 },
                 "examples" : {
                   "방 업데이트" : {
-                    "value" : "{\r\n  \"roomId\" : 2,\r\n  \"name\" : \"Room B\",\r\n  \"description\" : \"This is room B\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"ongoingSchedules\" : [ {\r\n    \"id\" : 2,\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    }\r\n  } ],\r\n  \"completedSchedules\" : [ ]\r\n}"
+                    "value" : "{\r\n  \"roomId\" : 2,\r\n  \"name\" : \"Room B\",\r\n  \"description\" : \"This is room B\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"schedules\" : [ {\r\n    \"id\" : 2,\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n}"
                   }
                 }
               }
@@ -395,11 +353,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/room-joined-memberId-405087814"
+                  "$ref" : "#/components/schemas/room-joined-memberId200999832"
                 },
                 "examples" : {
                   "회원 참여 방 목록 조회" : {
-                    "value" : "[ {\r\n  \"roomId\" : 1,\r\n  \"name\" : \"Room A\",\r\n  \"memberCount\" : \"Nickname(value=김민우) 외 2명\",\r\n  \"ongoingSchedules\" : [ {\r\n    \"id\" : 1,\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    }\r\n  } ]\r\n}, {\r\n  \"roomId\" : 2,\r\n  \"name\" : \"Room B\",\r\n  \"memberCount\" : \"Nickname(value=김민우) 외 2명\",\r\n  \"ongoingSchedules\" : [ {\r\n    \"id\" : 2,\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    }\r\n  } ]\r\n} ]"
+                    "value" : "[ {\r\n  \"roomId\" : 1,\r\n  \"name\" : \"Room A\",\r\n  \"memberSummary\" : \"Nickname(value=김민우) 외 2명\",\r\n  \"schedules\" : [ {\r\n    \"id\" : 1,\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n}, {\r\n  \"roomId\" : 2,\r\n  \"name\" : \"Room B\",\r\n  \"memberSummary\" : \"Nickname(value=김민우) 외 2명\",\r\n  \"schedules\" : [ {\r\n    \"id\" : 2,\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n} ]"
                   }
                 }
               }
@@ -497,77 +455,56 @@
   },
   "components" : {
     "schemas" : {
-      "room-joined-memberId-405087814" : {
-        "type" : "array",
-        "items" : {
-          "required" : [ "memberCount", "name", "roomId" ],
-          "type" : "object",
-          "properties" : {
-            "memberCount" : {
-              "type" : "string",
-              "description" : "방 멤버 수"
-            },
-            "name" : {
-              "type" : "string",
-              "description" : "방 이름"
-            },
-            "roomId" : {
-              "type" : "number",
-              "description" : "방 ID"
-            },
-            "ongoingSchedules" : {
-              "type" : "array",
-              "description" : "진행 중인 스케줄 목록",
-              "items" : {
-                "required" : [ "dates", "id" ],
-                "type" : "object",
-                "properties" : {
-                  "name" : {
-                    "required" : [ "value" ],
-                    "type" : "object",
-                    "properties" : {
-                      "value" : {
-                        "type" : "string",
-                        "description" : "스케줄 이름"
-                      }
-                    }
-                  },
-                  "dates" : {
-                    "type" : "array",
-                    "description" : "스케줄 날짜 목록",
-                    "items" : {
-                      "oneOf" : [ {
-                        "type" : "object"
-                      }, {
-                        "type" : "boolean"
-                      }, {
-                        "type" : "string"
-                      }, {
-                        "type" : "number"
-                      } ]
-                    }
-                  },
-                  "time" : {
-                    "required" : [ "endTime", "startTime" ],
-                    "type" : "object",
-                    "properties" : {
-                      "startTime" : {
-                        "type" : "string",
-                        "description" : "스케줄 시작 시간"
-                      },
-                      "endTime" : {
-                        "type" : "string",
-                        "description" : "스케줄 종료 시간"
-                      }
-                    }
-                  },
-                  "id" : {
-                    "type" : "number",
-                    "description" : "스케줄 ID"
-                  }
-                }
+      "member-schedule1188626968" : {
+        "required" : [ "dates", "id", "status" ],
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "string",
+                "description" : "회원 일정 이름"
               }
             }
+          },
+          "dates" : {
+            "type" : "array",
+            "description" : "회원 일정 날짜 목록",
+            "items" : {
+              "oneOf" : [ {
+                "type" : "object"
+              }, {
+                "type" : "boolean"
+              }, {
+                "type" : "string"
+              }, {
+                "type" : "number"
+              } ]
+            }
+          },
+          "time" : {
+            "required" : [ "endTime", "startTime" ],
+            "type" : "object",
+            "properties" : {
+              "startTime" : {
+                "type" : "string",
+                "description" : "회원 일정 시작 시간"
+              },
+              "endTime" : {
+                "type" : "string",
+                "description" : "회원 일정 종료 시간"
+              }
+            }
+          },
+          "id" : {
+            "type" : "number",
+            "description" : "회원 일정 ID"
+          },
+          "status" : {
+            "type" : "string",
+            "description" : "회원 일정 상태"
           }
         }
       },
@@ -616,6 +553,84 @@
           }
         }
       },
+      "room-joined-memberId200999832" : {
+        "type" : "array",
+        "items" : {
+          "required" : [ "memberSummary", "name", "roomId" ],
+          "type" : "object",
+          "properties" : {
+            "schedules" : {
+              "type" : "array",
+              "description" : "일정 목록",
+              "items" : {
+                "required" : [ "dates", "id", "status" ],
+                "type" : "object",
+                "properties" : {
+                  "name" : {
+                    "required" : [ "value" ],
+                    "type" : "object",
+                    "properties" : {
+                      "value" : {
+                        "type" : "string",
+                        "description" : "일정 이름"
+                      }
+                    }
+                  },
+                  "dates" : {
+                    "type" : "array",
+                    "description" : "일정 날짜 목록",
+                    "items" : {
+                      "oneOf" : [ {
+                        "type" : "object"
+                      }, {
+                        "type" : "boolean"
+                      }, {
+                        "type" : "string"
+                      }, {
+                        "type" : "number"
+                      } ]
+                    }
+                  },
+                  "time" : {
+                    "required" : [ "endTime", "startTime" ],
+                    "type" : "object",
+                    "properties" : {
+                      "startTime" : {
+                        "type" : "string",
+                        "description" : "일정 시작 시간"
+                      },
+                      "endTime" : {
+                        "type" : "string",
+                        "description" : "일정 종료 시간"
+                      }
+                    }
+                  },
+                  "id" : {
+                    "type" : "number",
+                    "description" : "일정 ID"
+                  },
+                  "status" : {
+                    "type" : "string",
+                    "description" : "일정 상태"
+                  }
+                }
+              }
+            },
+            "name" : {
+              "type" : "string",
+              "description" : "방 이름"
+            },
+            "memberSummary" : {
+              "type" : "string",
+              "description" : "참여 인원 요약"
+            },
+            "roomId" : {
+              "type" : "number",
+              "description" : "방 ID"
+            }
+          }
+        }
+      },
       "room-roomId-members99704018" : {
         "type" : "array",
         "items" : {
@@ -634,6 +649,175 @@
               "type" : "number",
               "description" : "멤버 ID"
             }
+          }
+        }
+      },
+      "guest-schedule-guestScheduleId103174176" : {
+        "required" : [ "dates", "id", "status" ],
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "string",
+                "description" : "비회원 일정 이름"
+              }
+            }
+          },
+          "dates" : {
+            "type" : "array",
+            "description" : "비회원 일정 날짜 목록",
+            "items" : {
+              "oneOf" : [ {
+                "type" : "object"
+              }, {
+                "type" : "boolean"
+              }, {
+                "type" : "string"
+              }, {
+                "type" : "number"
+              } ]
+            }
+          },
+          "time" : {
+            "required" : [ "endTime", "startTime" ],
+            "type" : "object",
+            "properties" : {
+              "startTime" : {
+                "type" : "string",
+                "description" : "비회원 일정 시작 시간"
+              },
+              "endTime" : {
+                "type" : "string",
+                "description" : "비회원 일정 종료 시간"
+              }
+            }
+          },
+          "id" : {
+            "type" : "number",
+            "description" : "비회원 일정 ID"
+          },
+          "status" : {
+            "type" : "string",
+            "description" : "비회원 일정 상태"
+          }
+        }
+      },
+      "room-roomId1690945989" : {
+        "required" : [ "description", "name", "roomId" ],
+        "type" : "object",
+        "properties" : {
+          "schedules" : {
+            "type" : "array",
+            "description" : "일정 목록",
+            "items" : {
+              "required" : [ "dates", "id", "status" ],
+              "type" : "object",
+              "properties" : {
+                "name" : {
+                  "required" : [ "value" ],
+                  "type" : "object",
+                  "properties" : {
+                    "value" : {
+                      "type" : "string",
+                      "description" : "일정 이름"
+                    }
+                  }
+                },
+                "dates" : {
+                  "type" : "array",
+                  "description" : "일정 날짜 목록",
+                  "items" : {
+                    "oneOf" : [ {
+                      "type" : "object"
+                    }, {
+                      "type" : "boolean"
+                    }, {
+                      "type" : "string"
+                    }, {
+                      "type" : "number"
+                    } ]
+                  }
+                },
+                "time" : {
+                  "required" : [ "endTime", "startTime" ],
+                  "type" : "object",
+                  "properties" : {
+                    "startTime" : {
+                      "type" : "string",
+                      "description" : "일정 시작 시간"
+                    },
+                    "endTime" : {
+                      "type" : "string",
+                      "description" : "일정 종료 시간"
+                    }
+                  }
+                },
+                "id" : {
+                  "type" : "number",
+                  "description" : "일정 ID"
+                },
+                "status" : {
+                  "type" : "string",
+                  "description" : "일정 상태"
+                }
+              }
+            }
+          },
+          "name" : {
+            "type" : "string",
+            "description" : "방 이름"
+          },
+          "description" : {
+            "type" : "string",
+            "description" : "방 설명"
+          },
+          "roomMembers" : {
+            "type" : "array",
+            "description" : "방 멤버 목록",
+            "items" : {
+              "required" : [ "isLeader", "memberId" ],
+              "type" : "object",
+              "properties" : {
+                "isLeader" : {
+                  "type" : "boolean",
+                  "description" : "리더 여부"
+                },
+                "id" : {
+                  "type" : "number",
+                  "description" : "방 멤버 ID",
+                  "nullable" : true
+                },
+                "memberId" : {
+                  "type" : "number",
+                  "description" : "멤버 ID"
+                }
+              }
+            }
+          },
+          "roomId" : {
+            "type" : "number",
+            "description" : "방 ID"
+          }
+        }
+      },
+      "auth-login-1791602856" : {
+        "required" : [ "guestScheduleId", "nickname", "password" ],
+        "type" : "object",
+        "properties" : {
+          "password" : {
+            "type" : "string",
+            "description" : "비밀번호"
+          },
+          "nickname" : {
+            "type" : "string",
+            "description" : "닉네임"
+          },
+          "guestScheduleId" : {
+            "type" : "number",
+            "description" : "게스트 일정 ID"
           }
         }
       },
@@ -772,94 +956,15 @@
           }
         }
       },
-      "guest-schedule-guestScheduleId-779676275" : {
-        "required" : [ "endDate", "endTime", "guestScheduleId", "name", "startDate", "startTime" ],
-        "type" : "object",
-        "properties" : {
-          "endDate" : {
-            "type" : "string",
-            "description" : "비회원 일정 종료 날짜"
-          },
-          "name" : {
-            "type" : "string",
-            "description" : "비회원 일정 이름"
-          },
-          "guestScheduleId" : {
-            "type" : "number",
-            "description" : "비회원 일정 ID"
-          },
-          "startTime" : {
-            "type" : "string",
-            "description" : "비회원 일정 시작 시간"
-          },
-          "endTime" : {
-            "type" : "string",
-            "description" : "비회원 일정 종료 시간"
-          },
-          "startDate" : {
-            "type" : "string",
-            "description" : "비회원 일정 시작 날짜"
-          }
-        }
-      },
-      "member-schedule-579727095" : {
-        "required" : [ "dates", "id" ],
-        "type" : "object",
-        "properties" : {
-          "name" : {
-            "required" : [ "value" ],
-            "type" : "object",
-            "properties" : {
-              "value" : {
-                "type" : "string",
-                "description" : "회원 일정 이름"
-              }
-            }
-          },
-          "dates" : {
-            "type" : "array",
-            "description" : "회원 일정 날짜 목록",
-            "items" : {
-              "oneOf" : [ {
-                "type" : "object"
-              }, {
-                "type" : "boolean"
-              }, {
-                "type" : "string"
-              }, {
-                "type" : "number"
-              } ]
-            }
-          },
-          "time" : {
-            "required" : [ "endTime", "startTime" ],
-            "type" : "object",
-            "properties" : {
-              "startTime" : {
-                "type" : "string",
-                "description" : "회원 일정 시작 시간"
-              },
-              "endTime" : {
-                "type" : "string",
-                "description" : "회원 일정 종료 시간"
-              }
-            }
-          },
-          "id" : {
-            "type" : "number",
-            "description" : "회원 일정 ID"
-          }
-        }
-      },
-      "room-roomId-219825925" : {
+      "room-roomId418303700" : {
         "required" : [ "description", "name", "roomId" ],
         "type" : "object",
         "properties" : {
-          "completedSchedules" : {
+          "schedules" : {
             "type" : "array",
-            "description" : "완료된 스케줄 목록",
+            "description" : "진행 중인 스케줄 목록",
             "items" : {
-              "required" : [ "dates", "id" ],
+              "required" : [ "dates", "id", "status" ],
               "type" : "object",
               "properties" : {
                 "name" : {
@@ -868,13 +973,13 @@
                   "properties" : {
                     "value" : {
                       "type" : "string",
-                      "description" : "스케줄 이름"
+                      "description" : "일정 이름"
                     }
                   }
                 },
                 "dates" : {
                   "type" : "array",
-                  "description" : "스케줄 날짜 목록",
+                  "description" : "일정 날짜 목록",
                   "items" : {
                     "oneOf" : [ {
                       "type" : "object"
@@ -893,17 +998,21 @@
                   "properties" : {
                     "startTime" : {
                       "type" : "string",
-                      "description" : "스케줄 시작 시간"
+                      "description" : "일정 시작 시간"
                     },
                     "endTime" : {
                       "type" : "string",
-                      "description" : "스케줄 종료 시간"
+                      "description" : "일정 종료 시간"
                     }
                   }
                 },
                 "id" : {
                   "type" : "number",
-                  "description" : "스케줄 ID"
+                  "description" : "일정 ID"
+                },
+                "status" : {
+                  "type" : "string",
+                  "description" : "일정 상태"
                 }
               }
             }
@@ -942,77 +1051,6 @@
           "roomId" : {
             "type" : "number",
             "description" : "방 ID"
-          },
-          "ongoingSchedules" : {
-            "type" : "array",
-            "description" : "진행 중인 스케줄 목록",
-            "items" : {
-              "required" : [ "dates", "id" ],
-              "type" : "object",
-              "properties" : {
-                "name" : {
-                  "required" : [ "value" ],
-                  "type" : "object",
-                  "properties" : {
-                    "value" : {
-                      "type" : "string",
-                      "description" : "스케줄 이름"
-                    }
-                  }
-                },
-                "dates" : {
-                  "type" : "array",
-                  "description" : "스케줄 날짜 목록",
-                  "items" : {
-                    "oneOf" : [ {
-                      "type" : "object"
-                    }, {
-                      "type" : "boolean"
-                    }, {
-                      "type" : "string"
-                    }, {
-                      "type" : "number"
-                    } ]
-                  }
-                },
-                "time" : {
-                  "required" : [ "endTime", "startTime" ],
-                  "type" : "object",
-                  "properties" : {
-                    "startTime" : {
-                      "type" : "string",
-                      "description" : "스케줄 시작 시간"
-                    },
-                    "endTime" : {
-                      "type" : "string",
-                      "description" : "스케줄 종료 시간"
-                    }
-                  }
-                },
-                "id" : {
-                  "type" : "number",
-                  "description" : "스케줄 ID"
-                }
-              }
-            }
-          }
-        }
-      },
-      "auth-login-1791602856" : {
-        "required" : [ "guestScheduleId", "nickname", "password" ],
-        "type" : "object",
-        "properties" : {
-          "password" : {
-            "type" : "string",
-            "description" : "비밀번호"
-          },
-          "nickname" : {
-            "type" : "string",
-            "description" : "닉네임"
-          },
-          "guestScheduleId" : {
-            "type" : "number",
-            "description" : "게스트 일정 ID"
           }
         }
       },
