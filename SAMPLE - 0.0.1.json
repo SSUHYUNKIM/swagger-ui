@@ -211,11 +211,11 @@
           "content" : {
             "application/json;charset=UTF-8" : {
               "schema" : {
-                "$ref" : "#/components/schemas/room-781096666"
+                "$ref" : "#/components/schemas/room-1096692971"
               },
               "examples" : {
                 "방 생성" : {
-                  "value" : "{\r\n  \"name\" : \"Room A\",\r\n  \"description\" : \"This is room A\",\r\n  \"msRequest\" : {\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    },\r\n    \"roomId\" : null\r\n  },\r\n  \"leaderMemberId\" : 1\r\n}"
+                  "value" : "{\r\n  \"name\" : \"Room A\",\r\n  \"msRequest\" : {\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    },\r\n    \"roomId\" : null\r\n  },\r\n  \"leaderMemberId\" : 1\r\n}"
                 }
               }
             }
@@ -223,7 +223,19 @@
         },
         "responses" : {
           "201" : {
-            "description" : "201"
+            "description" : "201",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/room-roomId-members-roomMemberId486549215"
+                },
+                "examples" : {
+                  "방 생성" : {
+                    "value" : "{\r\n  \"roomId\" : 1\r\n}"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -247,11 +259,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/room-roomId1690945989"
+                  "$ref" : "#/components/schemas/room-roomId1375349684"
                 },
                 "examples" : {
                   "방 조회" : {
-                    "value" : "{\r\n  \"roomId\" : 1,\r\n  \"name\" : \"Room A\",\r\n  \"description\" : \"This is room A\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"schedules\" : [ {\r\n    \"id\" : 1,\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n}"
+                    "value" : "{\r\n  \"roomId\" : 1,\r\n  \"name\" : \"Room A\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"schedules\" : [ {\r\n    \"id\" : 1,\r\n    \"dates\" : [ \"2023-01-01\", \"2023-01-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"09:00:00\",\r\n      \"endTime\" : \"17:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting A\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n}"
                   }
                 }
               }
@@ -305,11 +317,11 @@
           "content" : {
             "application/json;charset=UTF-8" : {
               "schema" : {
-                "$ref" : "#/components/schemas/room-781096666"
+                "$ref" : "#/components/schemas/room-1096692971"
               },
               "examples" : {
                 "방 업데이트" : {
-                  "value" : "{\r\n  \"name\" : \"Room B\",\r\n  \"description\" : \"This is room B\",\r\n  \"msRequest\" : {\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    },\r\n    \"roomId\" : null\r\n  },\r\n  \"leaderMemberId\" : 1\r\n}"
+                  "value" : "{\r\n  \"name\" : \"Room B\",\r\n  \"msRequest\" : {\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    },\r\n    \"roomId\" : null\r\n  },\r\n  \"leaderMemberId\" : 1\r\n}"
                 }
               }
             }
@@ -321,11 +333,11 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/room-roomId418303700"
+                  "$ref" : "#/components/schemas/room-roomId102707395"
                 },
                 "examples" : {
                   "방 업데이트" : {
-                    "value" : "{\r\n  \"roomId\" : 2,\r\n  \"name\" : \"Room B\",\r\n  \"description\" : \"This is room B\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"schedules\" : [ {\r\n    \"id\" : 2,\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n}"
+                    "value" : "{\r\n  \"roomId\" : 2,\r\n  \"name\" : \"Room B\",\r\n  \"roomMembers\" : [ {\r\n    \"id\" : null,\r\n    \"memberId\" : 1,\r\n    \"isLeader\" : true\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 2,\r\n    \"isLeader\" : false\r\n  }, {\r\n    \"id\" : null,\r\n    \"memberId\" : 3,\r\n    \"isLeader\" : false\r\n  } ],\r\n  \"schedules\" : [ {\r\n    \"id\" : 2,\r\n    \"dates\" : [ \"2023-02-01\", \"2023-02-02\" ],\r\n    \"time\" : {\r\n      \"startTime\" : \"10:00:00\",\r\n      \"endTime\" : \"18:00:00\"\r\n    },\r\n    \"name\" : {\r\n      \"value\" : \"Meeting B\"\r\n    },\r\n    \"status\" : \"PROGRESS\"\r\n  } ]\r\n}"
                   }
                 }
               }
@@ -705,8 +717,8 @@
           }
         }
       },
-      "room-roomId1690945989" : {
-        "required" : [ "description", "name", "roomId" ],
+      "room-roomId1375349684" : {
+        "required" : [ "name", "roomId" ],
         "type" : "object",
         "properties" : {
           "schedules" : {
@@ -770,10 +782,6 @@
             "type" : "string",
             "description" : "방 이름"
           },
-          "description" : {
-            "type" : "string",
-            "description" : "방 설명"
-          },
           "roomMembers" : {
             "type" : "array",
             "description" : "방 멤버 목록",
@@ -821,26 +829,8 @@
           }
         }
       },
-      "auth-login789143772" : {
-        "required" : [ "accessToken", "guestId", "nickname" ],
-        "type" : "object",
-        "properties" : {
-          "nickname" : {
-            "type" : "string",
-            "description" : "닉네임"
-          },
-          "accessToken" : {
-            "type" : "string",
-            "description" : "액세스 토큰"
-          },
-          "guestId" : {
-            "type" : "number",
-            "description" : "게스트 id"
-          }
-        }
-      },
-      "room-781096666" : {
-        "required" : [ "description", "leaderMemberId", "name" ],
+      "room-1096692971" : {
+        "required" : [ "leaderMemberId", "name" ],
         "type" : "object",
         "properties" : {
           "leaderMemberId" : {
@@ -900,10 +890,24 @@
           "name" : {
             "type" : "string",
             "description" : "방 이름"
-          },
-          "description" : {
+          }
+        }
+      },
+      "auth-login789143772" : {
+        "required" : [ "accessToken", "guestId", "nickname" ],
+        "type" : "object",
+        "properties" : {
+          "nickname" : {
             "type" : "string",
-            "description" : "방 설명"
+            "description" : "닉네임"
+          },
+          "accessToken" : {
+            "type" : "string",
+            "description" : "액세스 토큰"
+          },
+          "guestId" : {
+            "type" : "number",
+            "description" : "게스트 id"
           }
         }
       },
@@ -956,8 +960,8 @@
           }
         }
       },
-      "room-roomId418303700" : {
-        "required" : [ "description", "name", "roomId" ],
+      "room-roomId102707395" : {
+        "required" : [ "name", "roomId" ],
         "type" : "object",
         "properties" : {
           "schedules" : {
@@ -1020,10 +1024,6 @@
           "name" : {
             "type" : "string",
             "description" : "방 이름"
-          },
-          "description" : {
-            "type" : "string",
-            "description" : "방 설명"
           },
           "roomMembers" : {
             "type" : "array",
