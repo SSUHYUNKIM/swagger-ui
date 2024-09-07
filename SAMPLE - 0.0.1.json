@@ -222,12 +222,12 @@
           }
         },
         "responses" : {
-          "201" : {
-            "description" : "201",
+          "200" : {
+            "description" : "200",
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/room-roomId-members-roomMemberId486549215"
+                  "$ref" : "#/components/schemas/room1014052543"
                 },
                 "examples" : {
                   "방 생성" : {
@@ -714,6 +714,16 @@
           "status" : {
             "type" : "string",
             "description" : "비회원 일정 상태"
+          }
+        }
+      },
+      "room1014052543" : {
+        "required" : [ "roomId" ],
+        "type" : "object",
+        "properties" : {
+          "roomId" : {
+            "type" : "number",
+            "description" : "방 ID"
           }
         }
       },
